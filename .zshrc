@@ -138,3 +138,7 @@ export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 export GPG_TTY=$(tty)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/skaiur/.sdkman"
+[[ -s "/Users/skaiur/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/skaiur/.sdkman/bin/sdkman-init.sh"
