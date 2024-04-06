@@ -132,12 +132,8 @@ export PATH="/usr/local/sbin:$PATH"
 # Fig post block. Keep at the bottom of this file.
 #[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
 
-source ~/.bash_profile
-export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
-
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-export GPG_TTY=$(tty)
+export VISUAL=nvim
+export EDITOR=nvim
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/skaiur/.sdkman"
