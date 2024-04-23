@@ -1,6 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-#[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 source_if_exists () {
     if test -r "$1"; then
         source "$1"
@@ -30,6 +27,8 @@ precmd() {
 
 # PLUGINS
 plugins=(
+gradle
+mvn
 sudo
 git
 git-flow
@@ -118,8 +117,7 @@ bindkey '^ ' autosuggest-accept
 bindkey '^x' autosuggest-clear
 
 
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
@@ -134,6 +132,10 @@ export PATH="/usr/local/sbin:$PATH"
 
 export VISUAL=nvim
 export EDITOR=nvim
+
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+
+eval "$(tmuxifier init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/skaiur/.sdkman"

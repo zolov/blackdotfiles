@@ -7,9 +7,10 @@
 alias s="source $HOME/.zshrc"
 alias o="open ."
 alias zshrc="nvim $HOME/.zshrc"
+alias tmuxrc="nvim $HOME/.tmux.conf"
 alias g="git"
 alias qq=". ranger"
-alias clr="clear"
+
 alias ls="eza --icons"
 alias lsa="eza --icons --all"
 alias ll="eza --icons --long --no-user --git --git-ignore"
